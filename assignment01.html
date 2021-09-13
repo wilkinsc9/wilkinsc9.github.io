@@ -11,6 +11,21 @@ aside {
   font-style: italic;
   background-color: lightgray;
 }
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
 </style> 
  </head> 
  <body> 
@@ -44,24 +59,6 @@ aside {
    <br /> 
    <input type="submit" value="Submit" /> 
   </form> 
-  <!-- Error: Element style not allowed as child of element body in this context. Why I didn't fix: I have no idea what this error means. Something with form and style don't like eachother. --> 
-  <style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style> 
   <h2>HTML Table</h2> 
   <table> 
    <tbody> 
