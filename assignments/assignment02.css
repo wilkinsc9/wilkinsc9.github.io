@@ -8,6 +8,7 @@
 
 */
 
+p {color: red;}
 
 /* --- pre-existing css --- */
 .stripey tr:nth-child(even) {
