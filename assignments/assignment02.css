@@ -8,6 +8,10 @@
 
 */
 
+span {
+  display: inline-block;
+  width: 100px;
+}
 
 /* --- pre-existing css --- */
 .stripey tr:nth-child(even) {
