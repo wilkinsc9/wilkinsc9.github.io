@@ -9,8 +9,7 @@
 */
 
 span {
-  display: inline-block;
-  width: 100px;
+  color: red;
 }
 
 /* --- pre-existing css --- */
