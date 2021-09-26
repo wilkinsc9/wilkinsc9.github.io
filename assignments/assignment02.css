@@ -7,6 +7,16 @@
   </head>
 
 */
+body {
+  background: skyblue;
+}
+#classy {
+  padding-left: 10px;
+  border: 1px solid #4CAF50;
+}
+#igottabeme {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
 
 span {
   color: red;
