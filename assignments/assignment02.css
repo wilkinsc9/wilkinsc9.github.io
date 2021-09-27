@@ -37,12 +37,11 @@ span {
 }
 
 .b {
-  
+  display: block;
 }
 
 .c {
-  word-wrap: normal;
-  height: 1000px;
+  display: inline-block;
 }
 
 #cat{
