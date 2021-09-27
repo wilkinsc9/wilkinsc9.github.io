@@ -32,16 +32,15 @@ span {
   border: 5px solid #0000ff;
 }
 
-span.a {
-  word-wrap: normal;
-  height: 100px;
+.a {
+  display: inline;
 }
 
-span.b {
+.b {
   
 }
 
-span.c {
+.c {
   word-wrap: normal;
   height: 1000px;
 }
@@ -61,7 +60,7 @@ span.c {
 div:#bird{
   position: absolute;
   left:250px;
-  top:50px;
+  bottom:50px;
 }
 
 nav {
