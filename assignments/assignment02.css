@@ -57,8 +57,8 @@ span {
   bottom: 150px;
 }
 
-div:#bird{
-  position: absolute;
+#bird{
+  position: relative;
   left:250px;
   bottom:50px;
 }
