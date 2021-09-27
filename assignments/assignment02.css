@@ -32,6 +32,24 @@ span {
   border: 5px solid #0000ff;
 }
 
+#cat{
+  position: fixed; 
+  bottom: 0;
+  right: 0;
+}
+
+#dog{
+  position: relative;
+  right: 50px;
+  bottom: 150px;
+}
+
+#bird{
+  position: absolute;
+  left:250px;
+  top:50px;
+}
+
 /* --- pre-existing css --- */
 .stripey tr:nth-child(even) {
   background-color: gray;
