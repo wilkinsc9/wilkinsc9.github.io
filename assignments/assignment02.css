@@ -32,6 +32,20 @@ span {
   border: 5px solid #0000ff;
 }
 
+span.a {
+  word-wrap: normal;
+  height: 100px;
+}
+
+span.b {
+  
+}
+
+span.c {
+  word-wrap: normal;
+  height: 1000px;
+}
+
 #cat{
   position: fixed; 
   bottom: 0;
@@ -50,6 +64,15 @@ span {
   top:50px;
 }
 
+nav {
+  position: sticky;
+  top: 0;
+  right: 0;
+  background: green;
+  opacity: .9;
+  font-size: 20px;
+  padding: 5px;
+}
 /* --- pre-existing css --- */
 .stripey tr:nth-child(even) {
   background-color: gray;
