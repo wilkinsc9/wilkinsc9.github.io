@@ -56,10 +56,10 @@ span {
   bottom: 150px;
 }
 
-d4:#bird{
+div:#bird{
   position: absolute;
   left:250px;
-  top:50px;
+  bottom:425px;
 }
 
 nav {
