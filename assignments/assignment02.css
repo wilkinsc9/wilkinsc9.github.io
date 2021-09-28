@@ -56,10 +56,10 @@ span {
   bottom: 150px;
 }
 
-#bird{
+div:#bird{
   position: relative;
   left:250px;
-  bottom:425px;
+  top:50px;
 }
 
 nav {
