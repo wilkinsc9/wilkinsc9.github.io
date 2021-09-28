@@ -57,7 +57,7 @@ span {
 }
 
 div:#bird{
-  position: absolute;
+  position: relative;
   left:250px;
   bottom:425px;
 }
