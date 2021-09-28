@@ -59,7 +59,7 @@ span {
 #bird{
   position: relative;
   left:250px;
-  bottom:50px;
+  top:50px;
 }
 
 nav {
