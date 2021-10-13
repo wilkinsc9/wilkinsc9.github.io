@@ -2,7 +2,8 @@ let elem = [];
 // assign the entire table row for hole 1 to a variable, elem
 elem[1]
   = document.getElementById("1");
-
+elem[2]
+  = document.getElementById("2");
 // display the number of children (all td elements)
 // console.log(elem.children.length);
 // display the content of the + button, which is the first child of the fifth element
@@ -31,7 +32,7 @@ function add1 (elem) {
 }
 // create a "sub1" function
 function sub1 (elem) {
-  if(elem.children[2].innerHTML == "1") 
+  if(elem.children[2].innerHTML == "1"||elem.children[2].innerHTML == "-") 
     elem.children[2].innerHTML = "-";
   else {
     let currentScore = elem.children[2].innerHTML;
@@ -39,4 +40,3 @@ function sub1 (elem) {
     elem.children[2].innerHTML = currentScore - 1;
   }
 }
-
