@@ -157,7 +157,7 @@ function add1 (elem) {
     par = Number.parseInt(par);
     elem.children[3].innerHTML = currentScore - par;
   }
-  updateTotal(elem);
+  //updateTotal(elem);
 }
 
 // create a "sub1" function
@@ -178,15 +178,15 @@ function sub1 (elem) {
     par = Number.parseInt(par);
     elem.children[3].innerHTML = currentScore - par;
   }
-  updateTotal(elem);
+  //updateTotal(elem);
 }
 
 function c1 (elem) {
   elem.children[2].innerHTML = "-";
   elem.children[3].innerHTML = "-";
-  updateTotal(elem);
+  //updateTotal(elem);
 }
-
+/*
 function updateTotal (elem) {
   if (elem.children[3].innerHTML != "-") {
     let currentOver = elem.children[3].innerHTML;
@@ -218,4 +218,4 @@ function updateTotal (elem) {
   }
   else 
     totalRow.children[3].inner HTML += currentOver;
-}
+} */
