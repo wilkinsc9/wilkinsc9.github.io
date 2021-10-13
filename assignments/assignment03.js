@@ -200,6 +200,22 @@ function updateTotal (elem) {
     let par = elem.children[1].innerHTML;
     par = Number.parseInt(par);
   }
-
-  totalRow.children[1].inner HTML =
+  
+  if (totalRow.children[1].innerHTML == "-") {
+    totalRow.children[1].inner HTML == par;
+  }
+  else 
+    totalRow.children[1].inner HTML += par;
+  
+  if (totalRow.children[2].innerHTML == "-") {
+    totalRow.children[2].inner HTML == currentScore;
+  }
+  else 
+    totalRow.children[2].inner HTML += currentScore;
+  
+  if (totalRow.children[3].innerHTML == "-") {
+    totalRow.children[3].inner HTML == currentOver;
+  }
+  else 
+    totalRow.children[3].inner HTML += currentOver;
 }
