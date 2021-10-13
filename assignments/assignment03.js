@@ -113,6 +113,8 @@ function add1 (elem) {
   else {
     let currentScore = elem.children[2].innerHTML;
     let par = elem.children[1].innerHTML;
+    currentScore = Number.parseInt(currentScore);
+    par = Number.parseInt(par);
     elem.children[3].innerHTML == currentScore - par;
   }
 }
@@ -131,6 +133,8 @@ function sub1 (elem) {
   else {
     let currentScore = elem.children[2].innerHTML;
     let par = elem.children[1].innerHTML;
+    currentScore = Number.parseInt(currentScore);
+    par = Number.parseInt(par);
     elem.children[3].innerHTML == currentScore - par;
   }
 }
