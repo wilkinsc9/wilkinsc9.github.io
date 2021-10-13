@@ -108,6 +108,13 @@ function add1 (elem) {
     currentScore = Number.parseInt(currentScore);
     elem.children[2].innerHTML = currentScore + 1;
   }
+  if(elem.children[2].innerHTML == "-")
+    elem.children[3].innerHTML == "-";
+  else {
+    let currentScore = elem.children[2].innerHTML;
+    let par = elem.children[1].innerHTML;
+    elem.children[3].innerHTML == currentScore - par;
+  }
 }
 
 // create a "sub1" function
@@ -118,5 +125,12 @@ function sub1 (elem) {
     let currentScore = elem.children[2].innerHTML;
     currentScore = Number.parseInt(currentScore);
     elem.children[2].innerHTML = currentScore - 1;
+  }
+  if(elem.children[2].innerHTML == "-")
+    elem.children[3].innerHTML == "-";
+  else {
+    let currentScore = elem.children[2].innerHTML;
+    let par = elem.children[1].innerHTML;
+    elem.children[3].innerHTML == currentScore - par;
   }
 }
