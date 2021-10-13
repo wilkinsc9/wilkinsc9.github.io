@@ -18,8 +18,7 @@ elem[15] = document.getElementById("15");
 elem[16] = document.getElementById("16");
 elem[17] = document.getElementById("17");
 elem[18] = document.getElementById("18");
-//elem[19] = document.getElemnetById("19");
-//let totalRow = elem[19];
+elem[19] = document.getElemnetById("19");
 // display the number of children (all td elements)
 // console.log(elem.children.length);
 // display the content of the + button, which is the first child of the fifth element
@@ -157,7 +156,7 @@ function add1 (elem) {
     par = Number.parseInt(par);
     elem.children[3].innerHTML = currentScore - par;
   }
-  //updateTotal(elem);
+  updateTotal(elem);
 }
 
 // create a "sub1" function
@@ -178,44 +177,44 @@ function sub1 (elem) {
     par = Number.parseInt(par);
     elem.children[3].innerHTML = currentScore - par;
   }
-  //updateTotal(elem);
+  updateTotal(elem);
 }
 
 function c1 (elem) {
   elem.children[2].innerHTML = "-";
   elem.children[3].innerHTML = "-";
-  //updateTotal(elem);
+  updateTotal(elem);
 }
-/*
+
 function updateTotal (elem) {
-  if (elem.children[3].innerHTML != "-") {
+  if !(elem.children[3].innerHTML == "-") {
     let currentOver = elem.children[3].innerHTML;
     currentOver = Number.parseInt(currentOver);
   }
-  if (elem.children[2].innerHTML != "-") {
+  if !(elem.children[2].innerHTML == "-") {
     let currentScore = elem.children[2].innerHTML;
     currentScore = Number.parseInt(currentScore);
   }
-  if (elem.children[1].innerHTML != "-") {
+  if !(elem.children[1].innerHTML == "-") {
     let par = elem.children[1].innerHTML;
     par = Number.parseInt(par);
   }
   
-  if (totalRow.children[1].innerHTML == "-") {
-    totalRow.children[1].inner HTML == par;
+  if (elem[19].children[1].innerHTML == "-") {
+    elem[19].children[1].innerHTML = par;
   }
   else 
-    totalRow.children[1].inner HTML += par;
+    elem[19].children[1].innerHTML += par;
   
-  if (totalRow.children[2].innerHTML == "-") {
-    totalRow.children[2].inner HTML == currentScore;
+  if (elem[19].children[2].innerHTML == "-") {
+    elem[19].children[2].innerHTML = currentScore;
   }
   else 
-    totalRow.children[2].inner HTML += currentScore;
+    elem[19].children[2].innerHTML += currentScore;
   
-  if (totalRow.children[3].innerHTML == "-") {
-    totalRow.children[3].inner HTML == currentOver;
+  if (elem[19].children[3].innerHTML == "-") {
+    elem[19].children[3].innerHTML = currentOver;
   }
   else 
-    totalRow.children[3].inner HTML += currentOver;
-} */
+    elem[19].children[3].innerHTML += currentOver;
+} 
