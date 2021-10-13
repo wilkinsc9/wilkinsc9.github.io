@@ -18,7 +18,7 @@ elem[15] = document.getElementById("15");
 elem[16] = document.getElementById("16");
 elem[17] = document.getElementById("17");
 elem[18] = document.getElementById("18");
-elem[19] = document.getElemnetById("19");
+//elem[19] = document.getElemnetById("19");
 // display the number of children (all td elements)
 // console.log(elem.children.length);
 // display the content of the + button, which is the first child of the fifth element
@@ -156,7 +156,7 @@ function add1 (elem) {
     par = Number.parseInt(par);
     elem.children[3].innerHTML = currentScore - par;
   }
-  updateTotal(elem);
+  //updateTotal(elem);
 }
 
 // create a "sub1" function
@@ -177,15 +177,15 @@ function sub1 (elem) {
     par = Number.parseInt(par);
     elem.children[3].innerHTML = currentScore - par;
   }
-  updateTotal(elem);
+  //updateTotal(elem);
 }
 
 function c1 (elem) {
   elem.children[2].innerHTML = "-";
   elem.children[3].innerHTML = "-";
-  updateTotal(elem);
+  //updateTotal(elem);
 }
-
+/*
 function updateTotal (elem) {
   if !(elem.children[3].innerHTML == "-") {
     let currentOver = elem.children[3].innerHTML;
@@ -217,4 +217,4 @@ function updateTotal (elem) {
   }
   else 
     elem[19].children[3].innerHTML += currentOver;
-} 
+} */
