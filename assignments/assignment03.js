@@ -27,123 +27,123 @@ document.getElementById("totals").children[1].innerHTML = 72;
 
 // assign a function to the + button
 elem[1].children[4].children[0].onclick 
-  = function(){add1(elem[1]);};
+  = function(){add1(elem[1]);};findTotal();
 elem[2].children[4].children[0].onclick 
-  = function(){add1(elem[2]);};
+  = function(){add1(elem[2]);};findTotal();
 elem[3].children[4].children[0].onclick 
-  = function(){add1(elem[3]);};
+  = function(){add1(elem[3]);};findTotal();
 elem[4].children[4].children[0].onclick 
-  = function(){add1(elem[4]);};
+  = function(){add1(elem[4]);};findTotal();
 elem[5].children[4].children[0].onclick 
-  = function(){add1(elem[5]);};
+  = function(){add1(elem[5]);};findTotal();
 elem[6].children[4].children[0].onclick 
-  = function(){add1(elem[6]);};
+  = function(){add1(elem[6]);};findTotal();
 elem[7].children[4].children[0].onclick 
-  = function(){add1(elem[7]);};
+  = function(){add1(elem[7]);};findTotal();
 elem[8].children[4].children[0].onclick 
-  = function(){add1(elem[8]);};
+  = function(){add1(elem[8]);};findTotal();
 elem[9].children[4].children[0].onclick 
-  = function(){add1(elem[9]);};
+  = function(){add1(elem[9]);};findTotal();
 elem[10].children[4].children[0].onclick 
-  = function(){add1(elem[10]);};
+  = function(){add1(elem[10]);};findTotal();
 elem[11].children[4].children[0].onclick 
-  = function(){add1(elem[11]);};
+  = function(){add1(elem[11]);};findTotal();
 elem[12].children[4].children[0].onclick 
-  = function(){add1(elem[12]);};
+  = function(){add1(elem[12]);};findTotal();
 elem[13].children[4].children[0].onclick 
-  = function(){add1(elem[13]);};
+  = function(){add1(elem[13]);};findTotal();
 elem[14].children[4].children[0].onclick 
-  = function(){add1(elem[14]);};
+  = function(){add1(elem[14]);};findTotal();
 elem[15].children[4].children[0].onclick 
-  = function(){add1(elem[15]);};
+  = function(){add1(elem[15]);};findTotal();
 elem[16].children[4].children[0].onclick 
-  = function(){add1(elem[16]);};
+  = function(){add1(elem[16]);};findTotal();
 elem[17].children[4].children[0].onclick 
-  = function(){add1(elem[17]);};
+  = function(){add1(elem[17]);};findTotal();
 elem[18].children[4].children[0].onclick 
-  = function(){add1(elem[18]);};
+  = function(){add1(elem[18]);};findTotal();
 
 //assign a function to the - button
 elem[1].children[4].children[1].onclick 
-  = function(){sub1(elem[1]);};
+  = function(){sub1(elem[1]);};findTotal();
 elem[2].children[4].children[1].onclick 
-  = function(){sub1(elem[2]);};
+  = function(){sub1(elem[2]);};findTotal();
 elem[3].children[4].children[1].onclick 
-  = function(){sub1(elem[3]);};
+  = function(){sub1(elem[3]);};findTotal();
 elem[4].children[4].children[1].onclick 
-  = function(){sub1(elem[4]);};
+  = function(){sub1(elem[4]);};findTotal();
 elem[5].children[4].children[1].onclick 
-  = function(){sub1(elem[5]);};
+  = function(){sub1(elem[5]);};findTotal();
 elem[6].children[4].children[1].onclick 
-  = function(){sub1(elem[6]);};
+  = function(){sub1(elem[6]);};findTotal();
 elem[7].children[4].children[1].onclick 
-  = function(){sub1(elem[7]);};
+  = function(){sub1(elem[7]);};findTotal();
 elem[8].children[4].children[1].onclick 
-  = function(){sub1(elem[8]);};
+  = function(){sub1(elem[8]);};findTotal();
 elem[9].children[4].children[1].onclick 
-  = function(){sub1(elem[9]);};
+  = function(){sub1(elem[9]);};findTotal();
 elem[10].children[4].children[1].onclick 
-  = function(){sub1(elem[10]);};
+  = function(){sub1(elem[10]);};findTotal();
 elem[11].children[4].children[1].onclick 
-  = function(){sub1(elem[11]);};
+  = function(){sub1(elem[11]);};findTotal();
 elem[12].children[4].children[1].onclick 
-  = function(){sub1(elem[12]);};
+  = function(){sub1(elem[12]);};findTotal();
 elem[13].children[4].children[1].onclick 
-  = function(){sub1(elem[13]);};
+  = function(){sub1(elem[13]);};findTotal();
 elem[14].children[4].children[1].onclick 
-  = function(){sub1(elem[14]);};
+  = function(){sub1(elem[14]);};findTotal();
 elem[15].children[4].children[1].onclick 
-  = function(){sub1(elem[15]);};
+  = function(){sub1(elem[15]);};findTotal();
 elem[16].children[4].children[1].onclick 
-  = function(){sub1(elem[16]);};
+  = function(){sub1(elem[16]);};findTotal();
 elem[17].children[4].children[1].onclick 
-  = function(){sub1(elem[17]);};
+  = function(){sub1(elem[17]);};findTotal();
 elem[18].children[4].children[1].onclick 
-  = function(){sub1(elem[18]);};
+  = function(){sub1(elem[18]);};findTotal();
 
 // assign a function to the C button
 elem[1].children[4].children[2].onclick 
-  = function(){c1(elem[1]);};
+  = function(){c1(elem[1]);};findTotal();
 elem[2].children[4].children[2].onclick 
-  = function(){c1(elem[2]);};
+  = function(){c1(elem[2]);};findTotal();
 elem[3].children[4].children[2].onclick 
-  = function(){c1(elem[3]);};
+  = function(){c1(elem[3]);};findTotal();
 elem[4].children[4].children[2].onclick 
-  = function(){c1(elem[4]);};
+  = function(){c1(elem[4]);};findTotal();
 elem[5].children[4].children[2].onclick 
-  = function(){c1(elem[5]);};
+  = function(){c1(elem[5]);};findTotal();
 elem[6].children[4].children[2].onclick 
-  = function(){c1(elem[6]);};
+  = function(){c1(elem[6]);};findTotal();
 elem[7].children[4].children[2].onclick 
-  = function(){c1(elem[7]);};
+  = function(){c1(elem[7]);};findTotal();
 elem[8].children[4].children[2].onclick 
-  = function(){c1(elem[8]);};
+  = function(){c1(elem[8]);};findTotal();
 elem[9].children[4].children[2].onclick 
-  = function(){c1(elem[9]);};
+  = function(){c1(elem[9]);};findTotal();
 elem[10].children[4].children[2].onclick 
-  = function(){c1(elem[10]);};
+  = function(){c1(elem[10]);};findTotal();
 elem[11].children[4].children[2].onclick 
-  = function(){c1(elem[11]);};
+  = function(){c1(elem[11]);};findTotal();
 elem[12].children[4].children[2].onclick 
-  = function(){c1(elem[12]);};
+  = function(){c1(elem[12]);};findTotal();
 elem[13].children[4].children[2].onclick 
-  = function(){c1(elem[13]);};
+  = function(){c1(elem[13]);};findTotal();
 elem[14].children[4].children[2].onclick 
-  = function(){c1(elem[14]);};
+  = function(){c1(elem[14]);};findTotal();
 elem[15].children[4].children[2].onclick 
-  = function(){c1(elem[15]);};
+  = function(){c1(elem[15]);};findTotal();
 elem[16].children[4].children[2].onclick 
-  = function(){c1(elem[16]);};
+  = function(){c1(elem[16]);};findTotal();
 elem[17].children[4].children[2].onclick 
-  = function(){c1(elem[17]);};
+  = function(){c1(elem[17]);};findTotal();
 elem[18].children[4].children[2].onclick 
-  = function(){c1(elem[18]);};
+  = function(){c1(elem[18]);};findTotal();
 
 function findTotal(){
-    var total = 0;
+    let total = 0;
     for(var i=0;i<elem.length;i++){
-        if(elem[i].children[2].innerHTML != "-"){
-          total += parseInt(elem[i].children[2].innerHTML);
+        if(Number.parseInt(elem[i].children[2].innerHTML)){
+          total += Number.parseInt(elem[i].children[2].innerHTML);
         }
     }
     document.getElementById("totals").children[2].innerHTML = total;
@@ -167,7 +167,6 @@ function add1 (elem) {
     par = Number.parseInt(par);
     elem.children[3].innerHTML = currentScore - par;
   }
-  findTotal();
 }
 
 // create a "sub1" function
@@ -188,11 +187,9 @@ function sub1 (elem) {
     par = Number.parseInt(par);
     elem.children[3].innerHTML = currentScore - par;
   }
-  findTotal();
 }
 
 function c1 (elem) {
   elem.children[2].innerHTML = "-";
   elem.children[3].innerHTML = "-";
-  findTotal();
 }
