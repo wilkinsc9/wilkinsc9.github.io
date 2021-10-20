@@ -142,8 +142,9 @@ elem[18].children[4].children[2].onclick
 function findTotal(){
     var total = 0;
     for(var i=0;i<elem.length;i++){
-        if(parseInt(elem.children[2].innerHTML))
-            total += parseInt(elem.children[2].innerHTML);
+        if(elem[i].children[2].innerHTML != "-"){
+          total += parseInt(elem[i].children[2].innerHTML);
+        }
     }
     document.getElementById("totals").children[2].innerHTML = total;
 }
