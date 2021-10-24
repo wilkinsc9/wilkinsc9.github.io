@@ -169,6 +169,19 @@ let formArray = [
 
 // your code here
 
+let fieldLabel, fieldEntry, fieldError;
+for(let i=0; i<formArray.length; i++) {
+  fieldLabel = formArray[i].label;
+  fieldEntry =  `<input type='${formArray[i].inputType}' `
+    + `id='${formArray[i].id}' name='${formArray[i].id}' `  
+    + `onkeyup='${formArray[i].onkeyup}' \/>`;
+  fieldError = `<span id='' + formArray[i].errorId + ''></span>`;
+  appendTableRow3(table00,fieldLabel,fieldEntry,fieldError);
+}
+console.log(fieldLabel);
+console.log(fieldEntry);
+console.log(fieldError);
+
 // append to tableobj a 3-column table row 
 function appendTableRow3 (tableobj, col1, col2, col3) {
   // create column (table division) DOM objects
