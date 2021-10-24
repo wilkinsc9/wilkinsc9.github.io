@@ -159,7 +159,7 @@ function add1 (elem) {
     let currentScore = elem.children[2].innerHTML;
     currentScore = Number.parseInt(currentScore);
     elem.children[2].innerHTML = currentScore + 1;
-    document.getElementById("totals").children[2].innerHTML += 1;
+    document.getElementById("totals").children[2].innerHTML = Number.parseInt(document.getElementById("totals").children[2].innerHTML) + 1;
   }
   if(elem.children[2].innerHTML == "-")
     elem.children[3].innerHTML = "-";
@@ -169,7 +169,7 @@ function add1 (elem) {
     currentScore = Number.parseInt(currentScore);
     par = Number.parseInt(par);
     elem.children[3].innerHTML = currentScore - par;
-    document.getElementById("totals").children[3].innerHTML += (currentScore - par);
+    document.getElementById("totals").children[3].innerHTML = Number.parseInt(document.getElementById("totals").children[3].innerHTML) + currentScore - par;
   }
 }
 
@@ -184,7 +184,7 @@ function sub1 (elem) {
     let currentScore = elem.children[2].innerHTML;
     currentScore = Number.parseInt(currentScore);
     elem.children[2].innerHTML = currentScore - 1;
-    document.getElementById("totals").children[2].innerHTML -= 1;
+    document.getElementById("totals").children[2].innerHTML = Number.parseInt(document.getElementById("totals").children[2].innerHTML) - 1;
   }
   
   if(elem.children[2].innerHTML == "-")
@@ -195,7 +195,7 @@ function sub1 (elem) {
     currentScore = Number.parseInt(currentScore);
     par = Number.parseInt(par);
     elem.children[3].innerHTML = currentScore - par;
-    document.getElementById("totals").children[3].innerHTML += (currentScore - par);
+    document.getElementById("totals").children[3].innerHTML = Number.parseInt(document.getElementById("totals").children[3].innerHTML) + currentScore - par;
   }
 }
 
