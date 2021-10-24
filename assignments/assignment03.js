@@ -159,6 +159,7 @@ function add1 (elem) {
     let currentScore = elem.children[2].innerHTML;
     currentScore = Number.parseInt(currentScore);
     elem.children[2].innerHTML = currentScore + 1;
+    document.getElementById("totals").children[2].innerHTML += 1;
   }
   if(elem.children[2].innerHTML == "-")
     elem.children[3].innerHTML = "-";
@@ -168,18 +169,24 @@ function add1 (elem) {
     currentScore = Number.parseInt(currentScore);
     par = Number.parseInt(par);
     elem.children[3].innerHTML = currentScore - par;
+    document.getElementById("totals").children[3].innerHTML += (currentScore - par);
   }
 }
 
 // create a "sub1" function
 function sub1 (elem) {
-  if(elem.children[2].innerHTML == "1"||elem.children[2].innerHTML == "-") 
+  if(elem.children[2].innerHTML == "-") 
     elem.children[2].innerHTML = "-";
+  else if(elem.chidlren[2].innerHTML == "1") {
+    elem.children[2].innerHTML = "1";
+  }
   else {
     let currentScore = elem.children[2].innerHTML;
     currentScore = Number.parseInt(currentScore);
     elem.children[2].innerHTML = currentScore - 1;
+    document.getElementById("totals").children[2].innerHTML -= 1;
   }
+  
   if(elem.children[2].innerHTML == "-")
     elem.children[3].innerHTML = "-";
   else {
@@ -188,6 +195,7 @@ function sub1 (elem) {
     currentScore = Number.parseInt(currentScore);
     par = Number.parseInt(par);
     elem.children[3].innerHTML = currentScore - par;
+    document.getElementById("totals").children[3].innerHTML += (currentScore - par);
   }
 }
 
