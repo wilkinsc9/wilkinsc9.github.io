@@ -155,6 +155,7 @@ function findTotal(){
 function add1 (elem) {
   if(elem.children[2].innerHTML == "-") 
     elem.children[2].innerHTML = "1";
+    document.getElementById("totals").children[2].innerHTML = Number.parseInt(document.getElementById("totals").children[2].innerHTML) + 1;
   else {
     let currentScore = elem.children[2].innerHTML;
     currentScore = Number.parseInt(currentScore);
