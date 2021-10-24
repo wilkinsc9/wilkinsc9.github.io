@@ -155,17 +155,17 @@ function findTotal(){
 function add1 (elem) {
   if(elem.children[2].innerHTML == "-") {
     elem.children[2].innerHTML = "1";
-    let currentTotal = Number.parseInt(document.getElementById("totals").children[2].innerHTML);
-    currentTotal++;
-    document.getElementById("totals").children[2].innerHTML = currentTotal;
+    //let currentTotal = Number.parseInt(document.getElementById("totals").children[2].innerHTML);
+    //currentTotal++;
+    //document.getElementById("totals").children[2].innerHTML = currentTotal;
   }
   else {
     let currentScore = elem.children[2].innerHTML;
     currentScore = Number.parseInt(currentScore);
     elem.children[2].innerHTML = currentScore + 1;
-    let currentTotal = Number.parseInt(document.getElementById("totals").children[2].innerHTML);
-    currentTotal++;
-    document.getElementById("totals").children[2].innerHTML = currentTotal;
+    //let currentTotal = Number.parseInt(document.getElementById("totals").children[2].innerHTML);
+    //currentTotal++;
+    //document.getElementById("totals").children[2].innerHTML = currentTotal;
   }
   if(elem.children[2].innerHTML == "-") {
     elem.children[3].innerHTML = "-";
@@ -176,9 +176,9 @@ function add1 (elem) {
     currentScore = Number.parseInt(currentScore);
     par = Number.parseInt(par);
     elem.children[3].innerHTML = currentScore - par;
-    let currentOver = Number.parseInt(document.getElementById("totals").children[3].innerHTML);
-    currentOver = currentOver + (currentScore - par);
-    document.getElementById("totals").children[2].innerHTML = currentOver;
+    //let currentOver = Number.parseInt(document.getElementById("totals").children[3].innerHTML);
+    //currentOver = currentOver + (currentScore - par);
+    //document.getElementById("totals").children[2].innerHTML = currentOver;
   }
 }
 
@@ -194,9 +194,9 @@ function sub1 (elem) {
     let currentScore = elem.children[2].innerHTML;
     currentScore = Number.parseInt(currentScore);
     elem.children[2].innerHTML = currentScore - 1;
-    let currentTotal = Number.parseInt(document.getElementById("totals").children[2].innerHTML);
-    currentTotal--;
-    document.getElementById("totals").children[2].innerHTML = currentTotal;
+    //let currentTotal = Number.parseInt(document.getElementById("totals").children[2].innerHTML);
+    //currentTotal--;
+    //document.getElementById("totals").children[2].innerHTML = currentTotal;
   }
   
   if(elem.children[2].innerHTML == "-") {
@@ -208,9 +208,9 @@ function sub1 (elem) {
     currentScore = Number.parseInt(currentScore);
     par = Number.parseInt(par);
     elem.children[3].innerHTML = currentScore - par;
-    let currentOver = Number.parseInt(document.getElementById("totals").children[3].innerHTML);
-    currentOver = currentOver + (currentScore - par);
-    document.getElementById("totals").children[2].innerHTML = currentOver;
+    //let currentOver = Number.parseInt(document.getElementById("totals").children[3].innerHTML);
+    //currentOver = currentOver + (currentScore - par);
+    //document.getElementById("totals").children[2].innerHTML = currentOver;
   }
 }
 
