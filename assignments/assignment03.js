@@ -20,6 +20,8 @@ elem[17] = document.getElementById("17");
 elem[18] = document.getElementById("18");
 
 document.getElementById("totals").children[1].innerHTML = 72;
+document.getElementById("totals").children[2].innerHTML = 0;
+document.getElementById("totals").children[3].innerHTML = 0;
 // display the number of children (all td elements)
 // console.log(elem.children.length);
 // display the content of the + button, which is the first child of the fifth element
