@@ -153,11 +153,12 @@ function findTotal(){
 
 // create an "add1" function
 function add1 (elem) {
-  if(elem.children[2].innerHTML == "-") 
+  if(elem.children[2].innerHTML == "-") {
     elem.children[2].innerHTML = "1";
     let currentTotal = Number.parseInt(document.getElementById("totals").children[2].innerHTML);
     currentTotal++;
     document.getElementById("totals").children[2].innerHTML = currentTotal;
+  }
   else {
     let currentScore = elem.children[2].innerHTML;
     currentScore = Number.parseInt(currentScore);
@@ -166,8 +167,9 @@ function add1 (elem) {
     currentTotal++;
     document.getElementById("totals").children[2].innerHTML = currentTotal;
   }
-  if(elem.children[2].innerHTML == "-")
+  if(elem.children[2].innerHTML == "-") {
     elem.children[3].innerHTML = "-";
+  }
   else {
     let currentScore = elem.children[2].innerHTML;
     let par = elem.children[1].innerHTML;
@@ -182,8 +184,9 @@ function add1 (elem) {
 
 // create a "sub1" function
 function sub1 (elem) {
-  if(elem.children[2].innerHTML == "-") 
+  if(elem.children[2].innerHTML == "-") {
     elem.children[2].innerHTML = "-";
+  }
   else if(elem.chidlren[2].innerHTML == "1") {
     elem.children[2].innerHTML = "1";
   }
@@ -196,8 +199,9 @@ function sub1 (elem) {
     document.getElementById("totals").children[2].innerHTML = currentTotal;
   }
   
-  if(elem.children[2].innerHTML == "-")
+  if(elem.children[2].innerHTML == "-") {
     elem.children[3].innerHTML = "-";
+  }
   else {
     let currentScore = elem.children[2].innerHTML;
     let par = elem.children[1].innerHTML;
