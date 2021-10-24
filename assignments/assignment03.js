@@ -184,11 +184,8 @@ function add1 (elem) {
 
 // create a "sub1" function
 function sub1 (elem) {
-  if(elem.children[2].innerHTML == "-") {
+  if(elem.children[2].innerHTML == "-"||elem.chidlren[2].innerHTML == "1") {
     elem.children[2].innerHTML = "-";
-  }
-  else if(elem.chidlren[2].innerHTML == "1") {
-    elem.children[2].innerHTML = "1";
   }
   else {
     let currentScore = elem.children[2].innerHTML;
