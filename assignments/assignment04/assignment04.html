@@ -7,8 +7,17 @@
 
 <body>
   <h1>Assignment 4</h1>
-  <button class = "btn btn-success">ClubMeNow</button>
-  <button class = "btn btn-warning">General Exercises</button>
+  <button class = "btn btn-success" onclick = "displayClubMeNow()">ClubMeNow</button>
+  <button class = "btn btn-warning" onclick = "displayGeneralExercises()">General Exercises</button>
+  
+  <script>
+    function displayClubMeNow() {
+	    window.location.href = "clubMeNow.html"; 
+    }
+    function displayGeneralExercises() {
+	    window.location.href = "generalExercises.html"; 
+    }
+  </script>
   
   </body>
 
