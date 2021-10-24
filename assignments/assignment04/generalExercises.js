@@ -62,11 +62,11 @@ let table3b = createTable("table3b");
 div3b.appendChild(table3b);
 table3b.setAttribute("style", "border:1px solid black;")
 table3b.setAttribute("width", "100%")
-appendTableRow5(table3b,"1","2","3","4","5");
-appendTableRow5(table3b,"6","7","8","9","10");
-appendTableRow5(table3b,"11","12","13","14","15");
-appendTableRow5(table3b,"16","17","18","19","20");
-appendTableRow5(table3b,"21","22","23","24","25");
+appendTableRow5(table3b,"Item","Price","Qty","Price*Qty","");
+appendTableRow5(table3b,"Thingamabob","1.00","1","","");
+appendTableRow5(table3b,"Whachamacallit","2.00","2","","");
+appendTableRow5(table3b,"Doohickey","3.00","3","","");
+appendTableRow5(table3b,"Totals:","","","","","");
 
 // 9. Revise a non-object-oriented HTML form. Make it so the field in focus displays *only* its own error (not the errors of all the other fields), however, if the user clicks the "validate" button, then display all errors.
 // code below is from: https://www.guru99.com/practical-code-examples-using-javascript.html 
