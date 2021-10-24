@@ -1,11 +1,17 @@
-// 6. modify basic JS object, with "this" keyword
+// 6. modify basic JS object, with "this" keyword streetAddress, city, state, zipCode
 let person = {
   firstName: "Jane",
   lastName: "Doe",
   age: 45,
-  fullName: function() {return this.firstName  + " " + person.lastName}
+  streetAddress: "123 Road Street",
+  city: "Townland",
+  state: "Michigan",
+  zipCode: "12345",
+  fullName: function() {return this.firstName  + " " + person.lastName},
+  fullAddress: function() {return this.streetAddress + ", " + this.city+", "+this.state+", "+this.zipCode}
 }
 document.getElementById("1A").innerHTML = person.fullName();
+document.getElementById("1B").innerHTML = person.fullAddress();
 
 // Instructions
 // modify person object, above, as follows
