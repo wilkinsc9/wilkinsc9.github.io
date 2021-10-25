@@ -1,12 +1,4 @@
-let elem = [];
 // assign the entire table row for hole 1 to a variable, elem
-for(let x = 1; x<=18; x++) {
-  let str = x.toString();
-  elem[x] = document.getElementById(str);
-  elem[x].children[4].children[0].onclick = function(){add1(elem[x]);};
-  elem[x].children[4].children[1].onclick = function(){sub1(elem[x]);};
-  elem[x].children[4].children[2].onclick = function(){c1(elem[x]);};
-}
 /*
 elem[1] = document.getElementById("1");
 elem[2] = document.getElementById("2");
@@ -27,9 +19,6 @@ elem[16] = document.getElementById("16");
 elem[17] = document.getElementById("17");
 elem[18] = document.getElementById("18");
 */
-document.getElementById("totals").children[1].innerHTML = 72;
-document.getElementById("totals").children[2].innerHTML = 0;
-document.getElementById("totals").children[3].innerHTML = 0;
 // display the number of children (all td elements)
 // console.log(elem.children.length);
 // display the content of the + button, which is the first child of the fifth element
@@ -148,6 +137,26 @@ elem[17].children[4].children[2].onclick
 elem[18].children[4].children[2].onclick 
   = function(){c1(elem[18]);};
 */
+
+let elem = [];
+
+for(let x = 1; x<=18; x++) {
+  let str = x.toString();
+  elem[x] = document.getElementById(str);
+  elem[x].children[4].children[0].onclick = function(){add1(elem[x]);};
+  elem[x].children[4].children[1].onclick = function(){sub1(elem[x]);};
+  elem[x].children[4].children[2].onclick = function(){c1(elem[x]);};
+}
+
+let initialTotal = 0
+for(var i=1;i<elem.length;i++){
+        if(Number.parseInt(elem[i].children[1].innerHTML)){
+          initialTotal += Number.parseInt(elem[i].children[1].innerHTML);
+        }
+}
+document.getElementById("totals").children[1].innerHTML = initialTotal.toString();
+document.getElementById("totals").children[2].innerHTML = 0;
+document.getElementById("totals").children[3].innerHTML = 0;
 
 function findTotal(){
     let total = 0;
