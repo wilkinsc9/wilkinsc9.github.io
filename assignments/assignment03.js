@@ -140,7 +140,7 @@ elem[18].children[4].children[2].onclick
   = function(){c1(elem[18]);};
 function findTotal(){
     let total = 0;
-    for(var i=0;i<elem.length;i++){
+    for(var i=1;i<elem.length;i++){
         if(Number.parseInt(elem[i].children[2].innerHTML)){
           total += Number.parseInt(elem[i].children[2].innerHTML);
         }
@@ -193,4 +193,5 @@ function sub1 (elem) {
 function c1 (elem) {
   elem.children[2].innerHTML = "-";
   elem.children[3].innerHTML = "-";
+  findTotal();
 }
