@@ -138,6 +138,7 @@ elem[17].children[4].children[2].onclick
   = function(){c1(elem[17]);};
 elem[18].children[4].children[2].onclick 
   = function(){c1(elem[18]);};
+
 function findTotal(){
     let total = 0;
     for(var i=1;i<elem.length;i++){
@@ -147,6 +148,17 @@ function findTotal(){
     }
     document.getElementById("totals").children[2].innerHTML = total.toString();
 }
+
+function findOver(){
+    let total = 0;
+    for(var i=1;i<elem.length;i++){
+        if(Number.parseInt(elem[i].children[3].innerHTML)){
+          total += Number.parseInt(elem[i].children[3].innerHTML);
+        }
+    }
+    document.getElementById("totals").children[3].innerHTML = total.toString();
+}
+
 // create an "add1" function
 function add1 (elem) {
   
