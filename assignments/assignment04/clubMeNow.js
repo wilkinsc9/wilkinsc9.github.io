@@ -93,6 +93,7 @@ function displayClubDistanceEntryForm(c) {
 function undoLastShot() {
         // your code here !
 	localStorage.setItem("clubs", "clubsUndo");
+	appendTableRows();
 }
 
 // create a new (default) "clubs" array
