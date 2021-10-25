@@ -62,14 +62,14 @@ let table3b = createTable("table3b");
 div3b.appendChild(table3b);
 table3b.setAttribute("style", "border:1px solid black;")
 table3b.setAttribute("width", "100%")
-let pq1 = Number.parseInt(table3a.children[0].children[1].children[1]) * Number.parseInt(table3a.children[0].children[1].children[2]);
-let pq2 = Number.parseInt(table3a.children[0].children[2].children[1]) * Number.parseInt(table3a.children[0].children[2].children[2]);
-let pq3 = Number.parseInt(table3a.children[0].children[3].children[1]) * Number.parseInt(table3a.children[0].children[3].children[2]);
+let pq1 = Number.parseInt(table3a.children[0].children[1].children[1].innerHTML) * Number.parseInt(table3a.children[0].children[1].children[2].innerHTML);
+let pq2 = Number.parseInt(table3a.children[0].children[2].children[1].innerHTML) * Number.parseInt(table3a.children[0].children[2].children[2].innerHTML);
+let pq3 = Number.parseInt(table3a.children[0].children[3].children[1].innerHTML) * Number.parseInt(table3a.children[0].children[3].children[2].innerHTML);
 let pqTotal = pq1 + pq2 + pq3;
 appendTableRow5(table3b,"Item","Price","Qty","Price*Qty","Grand Total");
 appendTableRow5(table3b,"Thingamabob","1.00","1",pq1.toString(),"");
 appendTableRow5(table3b,"Whachamacallit","2.00","2",pq2.toString(),"");
-appendTableRow5(table3b,"Doohickey","3.00","3",pq3.toString,"");
+appendTableRow5(table3b,"Doohickey","3.00","3",pq3.toString(),"");
 appendTableRow5(table3b,"Totals:","","","",pqTotal.toString());
 
 // 9. Revise a non-object-oriented HTML form. Make it so the field in focus displays *only* its own error (not the errors of all the other fields), however, if the user clicks the "validate" button, then display all errors.
