@@ -1,5 +1,13 @@
 let elem = [];
 // assign the entire table row for hole 1 to a variable, elem
+for(let x = 1; x<=18; x++) {
+  let str = x.toString();
+  elem[x] = document.getElementById(str);
+  elem[x].children[4].children[0].onclick = function(){add1(elem[x]);};
+  elem[x].children[4].children[1].onclick = function(){sub1(elem[x]);};
+  elem[x].children[4].children[2].onclick = function(){c1(elem[x]);};
+}
+/*
 elem[1] = document.getElementById("1");
 elem[2] = document.getElementById("2");
 elem[3] = document.getElementById("3");
@@ -18,7 +26,7 @@ elem[15] = document.getElementById("15");
 elem[16] = document.getElementById("16");
 elem[17] = document.getElementById("17");
 elem[18] = document.getElementById("18");
-
+*/
 document.getElementById("totals").children[1].innerHTML = 72;
 document.getElementById("totals").children[2].innerHTML = 0;
 document.getElementById("totals").children[3].innerHTML = 0;
@@ -28,6 +36,7 @@ document.getElementById("totals").children[3].innerHTML = 0;
 // console.log(elem.children[4].children[0]); 
 
 // assign a function to the + button
+/*
 elem[1].children[4].children[0].onclick 
   = function(){add1(elem[1]);};
 elem[2].children[4].children[0].onclick 
@@ -138,6 +147,7 @@ elem[17].children[4].children[2].onclick
   = function(){c1(elem[17]);};
 elem[18].children[4].children[2].onclick 
   = function(){c1(elem[18]);};
+*/
 
 function findTotal(){
     let total = 0;
