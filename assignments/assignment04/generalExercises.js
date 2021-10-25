@@ -85,7 +85,7 @@ appendTableRow5(table3b,"Totals:","","","",pqTotal.toString());
     divs[5] = "errConfirm";
 
     // function: validate() ---------------------------------------------
-    function validate() {
+    function validate(box) {
         // initialize input array
         var inputs = new Array();
         inputs[0] = document.getElementById('first').value;
@@ -103,6 +103,11 @@ appendTableRow5(table3b,"Totals:","","","",pqTotal.toString());
         errors[4] = "<span style='color:red'>Please enter your password!</span>";
         errors[5] = "<span style='color:red'>Please confirm your password!</span>";
         // update error array with error message
+      if(box!=undefined){
+        var errMessage = errors[box];
+        var i = box;
+      }
+      if(box == undefined) {
         for (i in inputs) {
             var errMessage = errors[i];
             var div = divs[i];
@@ -127,6 +132,53 @@ appendTableRow5(table3b,"Totals:","","","",pqTotal.toString());
             } else
                 document.getElementById(div).innerHTML = "OK!";
         }
+      }
+      else if (box == 1) {
+          if (inputs[i] == "")
+                document.getElementById(div).innerHTML = errMessage;
+      }
+      else if (box == 2) {
+          if (inputs[i] == "")
+                document.getElementById(div).innerHTML = errMessage;
+      }
+      else if (box == 3) {
+          if (inputs[i] == "")
+                document.getElementById(div).innerHTML = errMessage;
+            else if (i == 2) {
+                var atpos = inputs[i].indexOf("@");
+                var dotpos = inputs[i].lastIndexOf(".");
+                if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= inputs[i].length)
+                    document.getElementById('errEmail').innerHTML 
+                      = "<span style='color: red'>Enter a valid email address!</span>";
+                else
+                    document.getElementById(div).innerHTML = "OK!";
+      }
+      else if (box == 4) {
+          if (inputs[i] == "")
+                document.getElementById(div).innerHTML = errMessage;
+      }
+      else if (box == 5) {
+         if (inputs[i] == "")
+                document.getElementById(div).innerHTML = errMessage;
+        var first = document.getElementById('password').value;
+        var second = document.getElementById('confirm').value;
+        if (second != first)
+            document.getElementById('errConfirm').innerHTML 
+              = "<span style='color: red'>Your passwords don't match!</span>";
+        else
+            document.getElementById(div).innerHTML = "OK!";
+      }
+      else if (box == 6) {
+        if (inputs[i] == "")
+                document.getElementById(div).innerHTML = errMessage;
+        var first = document.getElementById('password').value;
+        var second = document.getElementById('confirm').value;
+        if (second != first)
+            document.getElementById('errConfirm').innerHTML 
+              = "<span style='color: red'>Your passwords don't match!</span>";
+        else
+            document.getElementById(div).innerHTML = "OK!";
+      }
     }
 
     // function: finalValidate() ------------------------------------
