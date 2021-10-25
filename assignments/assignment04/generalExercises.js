@@ -104,8 +104,8 @@ appendTableRow5(table3b,"Totals:","","","",pqTotal.toString());
         errors[5] = "<span style='color:red'>Please confirm your password!</span>";
         // update error array with error message
       if(box!=undefined){
-        var errMessage = errors[box];
-        var i = box;
+        var errMessage = errors[box - 1];
+        var i = box - 1;
       }
       if(box == undefined) {
         for (i in inputs) {
