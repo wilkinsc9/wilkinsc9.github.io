@@ -80,10 +80,6 @@ function appendTableRows() {
 
 // navigate to "club ENTRY" screen (enter a new club, not a distance)
 function displayClubEntry() {
-	clubs = JSON.parse(localStorage.getItem("clubs"));
-	if (clubs.length > 14) {
-		alert("Warning: you are only allowed to carry 14 clubs in your golf bag in match play competition.");
-	}
 	window.location.href = "clubEntry.html"; 
 }
 
