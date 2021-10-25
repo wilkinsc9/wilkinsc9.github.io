@@ -145,10 +145,11 @@ function findTotal(){
           total += Number.parseInt(elem[i].children[2].innerHTML);
         }
     }
-    document.getElementById("totals").children[2].innerHTML = total;
+    document.getElementById("totals").children[2].innerHTML = total.toString;
 }
 // create an "add1" function
 function add1 (elem) {
+  
   if(elem.children[2].innerHTML == "-") 
     elem.children[2].innerHTML = "1";
   else {
@@ -165,6 +166,8 @@ function add1 (elem) {
     par = Number.parseInt(par);
     elem.children[3].innerHTML = currentScore - par;
   }
+  
+  findTotal();
 }
 // create a "sub1" function
 function sub1 (elem) {
@@ -184,6 +187,8 @@ function sub1 (elem) {
     par = Number.parseInt(par);
     elem.children[3].innerHTML = currentScore - par;
   }
+  
+  findTotal();
 }
 function c1 (elem) {
   elem.children[2].innerHTML = "-";
