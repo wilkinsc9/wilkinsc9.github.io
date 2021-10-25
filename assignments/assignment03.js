@@ -180,6 +180,7 @@ function add1 (elem) {
   }
   
   findTotal();
+  findOver();
 }
 // create a "sub1" function
 function sub1 (elem) {
@@ -201,9 +202,11 @@ function sub1 (elem) {
   }
   
   findTotal();
+  findOver();
 }
 function c1 (elem) {
   elem.children[2].innerHTML = "-";
   elem.children[3].innerHTML = "-";
   findTotal();
+  findOver();
 }
