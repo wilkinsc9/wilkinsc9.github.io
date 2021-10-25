@@ -145,7 +145,7 @@ function findTotal(){
           total += Number.parseInt(elem[i].children[2].innerHTML);
         }
     }
-    document.getElementById("totals").children[2].innerHTML = total.toString;
+    document.getElementById("totals").children[2].innerHTML = total.toString();
 }
 // create an "add1" function
 function add1 (elem) {
