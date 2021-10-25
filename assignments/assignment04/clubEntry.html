@@ -46,6 +46,9 @@
 	let clubRow = parseInt(localStorage.getItem('club'));
 	// retrieve the "clubs" array
 	let clubs = JSON.parse(localStorage.getItem('clubs'));
+	if (clubs.length() > 14) {
+		alert("Warning: you are only allowed to carry 14 clubs in your golf bag in match play competition.");
+	}
 	// display the full clubName of the user-chosen club
 	let newClubName ;
 	let newClubDistances;
@@ -57,10 +60,6 @@
 		str = JSON.stringify(clubs);
 		localStorage.setItem("clubs", str);
 		window.location.href = "clubDistanceList.html";
-		let club = JSON.parse(localStorage.getItem('clubs'));
-		if (club.length() > 14) {
-			alert("Warning: you are only allowed to carry 14 clubs in your golf bag in match play competition.");
-		}
 	}
 	
 	// navigate to club distance LIST screen
