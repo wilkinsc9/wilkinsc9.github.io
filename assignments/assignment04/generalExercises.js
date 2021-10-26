@@ -212,27 +212,27 @@ form00.appendChild(table00);
 let formArray = [
   {
     label: "First name:", inputType: "text", id: "first10",
-    onkeyup: "validate10();", errorId: "errFirst10"
+    onkeyup: "validate10(0);", errorId: "errFirst10"
   },
   {
     label: "Last name:", inputType: "text", id: "last10",
-    onkeyup: "validate10();", errorId: "errLast10"
+    onkeyup: "validate10(1);", errorId: "errLast10"
   },
   {
     label: "Email:", inputType: "text", id: "email10",
-    onkeyup: "validate10();", errorId: "errEmail10"
+    onkeyup: "validate10(2);", errorId: "errEmail10"
   },
   {
     label: "User id:", inputType: "text", id: "uid10",
-    onkeyup: "validate10();", errorId: "errUid10"
+    onkeyup: "validate10(3);", errorId: "errUid10"
   },
   {
     label: "Password:", inputType: "password", id: "password10",
-    onkeyup: "validate10();", errorId: "errPassword10"
+    onkeyup: "validate10(4);", errorId: "errPassword10"
   },
   {
     label: "Confirm Password:", inputType: "password", id: "confirm10",
-    onkeyup: "validate10();", errorId: "errConfirm10"
+    onkeyup: "validate10(5);", errorId: "errConfirm10"
   }
 ];
 
@@ -252,6 +252,117 @@ for (let i = 0; i < formArray.length; i++) {
 console.log(fieldLabel);
 console.log(fieldEntry);
 console.log(fieldError);
+
+var divs10 = new Array();
+divs10[0] = "errFirst10";
+divs10[1] = "errLast10";
+divs10[2] = "errEmail10";
+divs10[3] = "errUid10";
+divs10[4] = "errPassword10";
+divs10[5] = "errConfirm10";
+
+// function: validate() ---------------------------------------------
+function validate10(num) {
+  // initialize input array
+  var inputs = new Array();
+  inputs[0] = document.getElementById('first10').value;
+  inputs[1] = document.getElementById('last10').value;
+  inputs[2] = document.getElementById('email10').value;
+  inputs[3] = document.getElementById('uid10').value;
+  inputs[4] = document.getElementById('password10').value;
+  inputs[5] = document.getElementById('confirm10').value;
+
+  // initialize error array
+  var errors = new Array();
+  errors[0] = "<span style='color:red'>Please enter your first name!</span>";
+  errors[1] = "<span style='color:red'>Please enter your last name!</span>";
+  errors[2] = "<span style='color:red'>Please enter your email!</span>";
+  errors[3] = "<span style='color:red'>Please enter your user id!</span>";
+  errors[4] = "<span style='color:red'>Please enter your password!</span>";
+  errors[5] = "<span style='color:red'>Please confirm your password!</span>";
+
+  switch (num) {
+    case 0:
+      if (inputs[0] == "") {
+        document.getElementById(divs10[0]).innerHTML = errors[0];
+      }
+      else {
+        document.getElementById(divs10[0]).innerHTML = "OK!";
+      }
+      break;
+    case 1:
+      if (inputs[1] == "") {
+        document.getElementById(divs10[1]).innerHTML = errors[1];
+      }
+      else {
+        document.getElementById(divs10[1]).innerHTML = "OK!";
+      }
+      break;
+    case 2:
+      var atpos = inputs[2].indexOf("@");
+      var dotpos = inputs[2].lastIndexOf(".");
+      if (inputs[2] == "") {
+        document.getElementById(divs10[2]).innerHTML = errors[2];
+      } else if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= inputs[2].length) {
+        document.getElementById(divs10[2]).innerHTML = "<span style='color: red'>Enter a valid email address!</span>";
+      }
+      else {
+        document.getElementById(divs10[2]).innerHTML = "OK!";
+      }
+      break;
+    case 3:
+      if (inputs[3] == "") {
+        document.getElementById(divs10[3]).innerHTML = errors[3];
+      }
+      else {
+        document.getElementById(divs10[3]).innerHTML = "OK!";
+      }
+      break;
+    case 4:
+      if (inputs[4] == "") {
+        document.getElementById(divs10[4]).innerHTML = errors[4];
+      }
+      else {
+        document.getElementById(divs10[4]).innerHTML = "OK!";
+      }
+      break;
+    case 5:
+      var first = inputs[4];
+      var second = inputs[5];
+      if (second != first)
+        document.getElementById(divs10[5]).innerHTML = "<span style='color: red'>Your passwords don't match!</span>";
+      else
+        document.getElementById(divs10[5]).innerHTML = "OK!";
+      break;
+    default:
+      for (i in inputs) {
+        var errMessage = errors[i];
+        var div = divs[i];
+        if (inputs[i] == "")
+          document.getElementById(div).innerHTML = errMessage;
+        else if (i == 2) {
+          var atpos = inputs[i].indexOf("@");
+          var dotpos = inputs[i].lastIndexOf(".");
+          if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= inputs[i].length)
+            document.getElementById('errEmail').innerHTML
+              = "<span style='color: red'>Enter a valid email address!</span>";
+          else
+            document.getElementById(div).innerHTML = "OK!";
+        } else if (i == 5) {
+          var first = document.getElementById('password').value;
+          var second = document.getElementById('confirm').value;
+          if (second != first)
+            document.getElementById('errConfirm').innerHTML
+              = "<span style='color: red'>Your passwords don't match!</span>";
+          else
+            document.getElementById(div).innerHTML = "OK!";
+        } else
+          document.getElementById(div).innerHTML = "OK!";
+      }
+      break;
+  }
+
+}
 
 // append to tableobj a 3-column table row 
 function appendTableRow3(tableobj, col1, col2, col3) {
