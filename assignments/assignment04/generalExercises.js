@@ -84,78 +84,78 @@ divs[3] = "errUid";
 divs[4] = "errPassword";
 divs[5] = "errConfirm";
 
-// initialize input array
-var inputs = new Array();
-inputs[0] = document.getElementById('first').value;
-inputs[1] = document.getElementById('last').value;
-inputs[2] = document.getElementById('email').value;
-inputs[3] = document.getElementById('uid').value;
-inputs[4] = document.getElementById('password').value;
-inputs[5] = document.getElementById('confirm').value;
-
-// initialize error array
-var errors = new Array();
-errors[0] = "<span style='color:red'>Please enter your first name!</span>";
-errors[1] = "<span style='color:red'>Please enter your last name!</span>";
-errors[2] = "<span style='color:red'>Please enter your email!</span>";
-errors[3] = "<span style='color:red'>Please enter your user id!</span>";
-errors[4] = "<span style='color:red'>Please enter your password!</span>";
-errors[5] = "<span style='color:red'>Please confirm your password!</span>";
-
 // function: validate() ---------------------------------------------
 function validate(num) {
+  // initialize input array
+  var inputs = new Array();
+  inputs[0] = document.getElementById('first').value;
+  inputs[1] = document.getElementById('last').value;
+  inputs[2] = document.getElementById('email').value;
+  inputs[3] = document.getElementById('uid').value;
+  inputs[4] = document.getElementById('password').value;
+  inputs[5] = document.getElementById('confirm').value;
+
+  // initialize error array
+  var errors = new Array();
+  errors[0] = "<span style='color:red'>Please enter your first name!</span>";
+  errors[1] = "<span style='color:red'>Please enter your last name!</span>";
+  errors[2] = "<span style='color:red'>Please enter your email!</span>";
+  errors[3] = "<span style='color:red'>Please enter your user id!</span>";
+  errors[4] = "<span style='color:red'>Please enter your password!</span>";
+  errors[5] = "<span style='color:red'>Please confirm your password!</span>";
+
   switch (num) {
     case 0:
       if (inputs[0] == "") {
-        document.getElementById(errDivs[0]).innerHTML = errors[0];
+        document.getElementById(divs[0]).innerHTML = errors[0];
       }
       else {
-        document.getElementById(errDivs[0]).innerHTML = "OK!";
+        document.getElementById(divs[0]).innerHTML = "OK!";
       }
       break;
     case 1:
       if (inputs[1] == "") {
-        document.getElementById(errDivs[1]).innerHTML = errors[1];
+        document.getElementById(divs[1]).innerHTML = errors[1];
       }
       else {
-        document.getElementById(errDivs[1]).innerHTML = "OK!";
+        document.getElementById(divs[1]).innerHTML = "OK!";
       }
       break;
     case 2:
       var atpos = inputs[2].indexOf("@");
       var dotpos = inputs[2].lastIndexOf(".");
       if (inputs[2] == "") {
-        document.getElementById(errDivs[2]).innerHTML = errors[2];
+        document.getElementById(divs[2]).innerHTML = errors[2];
       } else if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= inputs[2].length) {
-        document.getElementById(errDivs[2]).innerHTML = "<span style='color: red'>Enter a valid email address!</span>";
+        document.getElementById(divs[2]).innerHTML = "<span style='color: red'>Enter a valid email address!</span>";
       }
       else {
-        document.getElementById(errDivs[2]).innerHTML = "OK!";
+        document.getElementById(divs[2]).innerHTML = "OK!";
       }
       break;
     case 3:
-      if (inputs[4] == "") {
-        document.getElementById(errDivs[4]).innerHTML = errors[4];
+      if (inputs[3] == "") {
+        document.getElementById(divs[3]).innerHTML = errors[3];
       }
       else {
-        document.getElementById(errDivs[4]).innerHTML = "OK!";
+        document.getElementById(divs[3]).innerHTML = "OK!";
       }
       break;
     case 4:
       if (inputs[4] == "") {
-        document.getElementById(errDivs[4]).innerHTML = errors[4];
+        document.getElementById(divs[4]).innerHTML = errors[4];
       }
       else {
-        document.getElementById(errDivs[4]).innerHTML = "OK!";
+        document.getElementById(divs[4]).innerHTML = "OK!";
       }
       break;
     case 5:
       var first = inputs[4];
       var second = inputs[5];
       if (second != first)
-        document.getElementById(errDivs[5]).innerHTML = "<span style='color: red'>Your passwords don't match!</span>";
+        document.getElementById(divs[5]).innerHTML = "<span style='color: red'>Your passwords don't match!</span>";
       else
-        document.getElementById(errDivs[5]).innerHTML = "OK!";
+        document.getElementById(divs[5]).innerHTML = "OK!";
       break;
     default:
       for (i in inputs) {
