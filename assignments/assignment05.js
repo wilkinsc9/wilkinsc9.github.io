@@ -108,7 +108,7 @@ function loadContent() {
         = newConfirmedOver1000.map( 
           (x) => x.NewDeaths );
       chartData.options.title.text 
-        = "Covid 19 Hotspots" ;
+        = "Covid 19 Hotspots on "+dayjs().format("MMMM")+" "+dayjs().format("D")+", "+dayjs().format("YYYY");
       myChart = new Chart(ctx, chartData); 
 
     } // end if
@@ -222,4 +222,18 @@ var populations = {
 'papua-new-guinea' : 8935000,
 'austria' : 8915382,
 'switzerland' : 8632703,
+}
+
+// step2 
+// new array 
+// loop through all covidJsObj.Countries[i] 
+// push all info i need
+var newArray = [] 
+for (let i=0; i<covidJsObj.Countries.length; i++) {
+  newArray.push({
+    "Slug": "\"" + covidJsObj.Countries[i].Slug + "\"",
+    "TotalConfirmed": covidJsObj.Countries[i].TotalConfirmed
+    // continue here...
+  })
+  
 }
