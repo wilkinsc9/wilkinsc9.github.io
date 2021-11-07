@@ -30,6 +30,10 @@ var chartData = {
       label: 'oranges',
       data: [2, 29, 5, 5, 2, 3, 10],
       backgroundColor: "rgba(255,140,0,0.4)"
+    }, {
+      label: 'oranges',
+      data: [2, 29, 5, 5, 2, 3, 10],
+      backgroundColor: "rgba(255,140,0,0.4)"
     }]
   },
   options: {
@@ -78,6 +82,7 @@ function loadContent() {
       
       covidJson = this.responseText;
       covidJsObj = JSON.parse(covidJson);
+      console.log(covidJsObj);
       newConfirmedOver1000 = [];
       
 	    for (let c of covidJsObj.Countries) {
@@ -85,20 +90,25 @@ function loadContent() {
           newConfirmedOver1000.push({ 
             "Slug": c.Slug, 
             "NewConfirmed": c.NewConfirmed, 
-            "NewDeaths": c.NewDeaths
+            "NewDeaths": c.NewDeaths,
+            "TotalConfirmedPer100000": Math.round((c.TotalConfirmed/populations[c.Slug])*100000, 2),
           });
         }
       }
-      newConfirmedOver1000 = _.orderBy(newConfirmedOver1000, "NewDeaths", "desc");
+      newConfirmedOver1000 = _.orderBy(newConfirmedOver1000, "TotalConfirmedPer100000", "desc");
 
       chartData.data.datasets[0].backgroundColor 
         = "rgba(100,100,100,0.4)"; // gray
-      chartData.data.datasets[1].backgroundColor 
+      chartData.data.datasets[1].backgroundColor  
         = "rgba(255,0,0,0.4)"; // red
+      chartData.data.datasets[2].backgroundColor 
+        = "rgba(0,255,0,0.4)"; // green 
       chartData.data.datasets[0].label  
         = 'new cases';
       chartData.data.datasets[1].label  
         = 'new deaths';
+      chartData.data.datasets[2].label  
+        = 'total cases per 100000';
       chartData.data.labels  
         = newConfirmedOver1000.map( (x) => x.Slug );
       chartData.data.datasets[0].data  
@@ -107,6 +117,9 @@ function loadContent() {
       chartData.data.datasets[1].data  
         = newConfirmedOver1000.map( 
           (x) => x.NewDeaths );
+      chartData.data.datasets[2].data  
+        = newConfirmedOver1000.map( 
+          (x) => x.TotalConfirmedPer100000 );
       chartData.options.title.text 
         = "Covid 19 Hotspots on "+dayjs().format("MMMM")+" "+dayjs().format("D")+", "+dayjs().format("YYYY");
       myChart = new Chart(ctx, chartData); 
