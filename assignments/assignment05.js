@@ -82,17 +82,21 @@ var chartData = {
 // code below modified from: 
 // https://www.w3schools.com/js/js_ajax_intro.asp
 
-function loadContent() {
-  xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function () {
-    if (this.readyState == 4
-      && this.status == 200) {
+xhttp = new XMLHttpRequest();
 
-      covidJson = this.responseText;
-      let temp = new Date();
-      if (localStorage.getItem("covidJson") === 0 || ((temp-date)>86400000)) {
-        localStorage.setItem("covidJson", covidJson)
-      }
+xhttp.onreadystatechange = function () {
+  if (this.readyState == 4
+      && this.status == 200) {
+    localStorage.setItem("covidJson") = this.responseText;
+  }
+}
+
+xhttp.open("GET", URL, true);
+xhttp.send();
+
+function loadContent() {
+  
+      covidJson = localStorage.getItem("covidJson");
       covidJsObj = JSON.parse(covidJson);
       console.log(covidJsObj);
       newConfirmedOver1000 = [];
@@ -159,13 +163,7 @@ function loadContent() {
         = "Covid 19 Hotspots on " + dayjs().format("MMMM") + " " + dayjs().format("D") + ", " + dayjs().format("YYYY");
       myChart = new Chart(ctx, chartData);
 
-    } // end if
-
-  }; // end xhttp.onreadystatechange = function()
-
-  xhttp.open("GET", URL, true);
-  let date = new Date();
-  xhttp.send();
+  
 
 } // end function loadContent() 
 
