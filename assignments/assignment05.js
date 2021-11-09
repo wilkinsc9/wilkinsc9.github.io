@@ -85,7 +85,7 @@ var chartData = {
 xhttp = new XMLHttpRequest();
 
 if(localStorage.getItem("covidJson")==null || dayjs(JSON.parse(localStorage.getItem("lastCall")))<=now)) {
-  localStorage.setItem("lastCall", JSON.stringify(dayjs().add(24, "h")));
+  localStorage.setItem("lastCall", JSON.stringify(dayjs().add(24, "s")));
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4
         && this.status == 200) {
