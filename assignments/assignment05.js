@@ -7,7 +7,7 @@ function is10(x) {
 }
 
 // ---------- Global variables ----------
-
+var now = dayjs();
 // use "var" keyword so code works in CodePen
 
 // Covid19api variables
@@ -84,10 +84,13 @@ var chartData = {
 
 xhttp = new XMLHttpRequest();
 
-xhttp.onreadystatechange = function () {
-  if (this.readyState == 4
-      && this.status == 200) {
-    localStorage.setItem("covidJson", this.responseText);
+if(localStorage.getItem("covidJson")==null || dayjs(JSON.parse(localStorage.getItem("lastCall")))<=now)) {
+  localStorage.setItem("lastCall", JSON.stringify(dayjs().add(24, "h")));
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4
+        && this.status == 200) {
+      localStorage.setItem("covidJson", this.responseText);
+    }
   }
 }
 
