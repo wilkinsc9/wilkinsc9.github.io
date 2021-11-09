@@ -85,6 +85,12 @@ var chartData = {
 xhttp = new XMLHttpRequest();
 
 if(localStorage.getItem("covidJson")==null || dayjs(JSON.parse(localStorage.getItem("lastCall")))<=now) {
+  if(localStorage.getItem("covidJson")==null) {
+    console.log("Storage is empty");
+  }
+  if(dayjs(JSON.parse(localStorage.getItem("lastCall")))<=now) {
+    console.log("Making new call to API");
+  }
   localStorage.setItem("lastCall", JSON.stringify(dayjs().add(24, "s")));
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4
