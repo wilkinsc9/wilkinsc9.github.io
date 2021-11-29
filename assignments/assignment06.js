@@ -61,12 +61,14 @@ var loans = [
       $(this).css("background-color", "white");
     });
     
+      let regex = /[1-9][0-9]{3}/; // can only take in 1000-9999 for year
+      
     // set focus to first year: messes up codepen
     // $("#loan_year01").focus();
     $("#loan_year01").focus( function() {
       let year = parseInt($("#loan_year01").val());
       console.log(year);
-      if(typeof year == Number && year >=0) { // Only update loans array when input is valid
+      if(regex.test(year)==true) { // Only update loans array when input is valid
         updateLoansArray();
       }
     });
