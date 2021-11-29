@@ -61,7 +61,7 @@ var loans = [
       $(this).css("background-color", "white");
     });
     
-      let regex = /[1-9][0-9]{3}/; // can only take in 1000-9999 for year
+      let regex = /^[1-9][0-9]*/; // takes in any number that doesnt start with 0 ex: 011 not work
       
     // set focus to first year: messes up codepen
     // $("#loan_year01").focus();
